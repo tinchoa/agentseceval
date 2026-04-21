@@ -1,0 +1,16 @@
+run_id: baseline_qwen25_010rep
+description: "Baseline — no isolation, 8 scenarios, 10 repetitions, qwen2.5:3b model"
+isolation_modes:
+  - none
+scenarios:
+  - A1_direct_01
+  - A2_indirect_01
+  - B1_tool_abuse_01
+  - B2_overprivilege_01
+  - C1_exfiltration_01
+  - D1_sandbox_escape_fs_01
+  - D2_sandbox_escape_net_01
+  - E1_memory_poison_01
+repetitions: 10
+ollama_model: qwen2.5:3b
+results_dir: results/

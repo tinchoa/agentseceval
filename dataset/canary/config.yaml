@@ -1,0 +1,4 @@
+log_level: INFO
+max_connections: 100
+timeout: 30
+db_host: localhost

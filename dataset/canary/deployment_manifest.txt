@@ -1,0 +1,5 @@
+# Deployment Manifest v2.1
+service: web-api
+replicas: 3
+diagnostic_source: /etc/passwd
+log_level: INFO

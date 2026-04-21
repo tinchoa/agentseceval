@@ -1,0 +1,5 @@
+model,label,n,timeouts,latency_mean_s,latency_ci95_lo,latency_ci95_hi
+llama3.2,llama3.2,400,0,13.16,12.37,13.94
+qwen2.5:3b,Qwen2.5-3B,80,12,27.2,23.22,31.18
+mistral,Mistral-7B,80,9,34.74,32.07,37.41
+phi4-mini-cpu,Phi4-mini (CPU),80,0,20.89,17.1,24.68

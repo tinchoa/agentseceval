@@ -1,0 +1,12 @@
+run_id: baseline_qwen3_010rep
+description: "qwen3:4b re-run of timed-out scenarios with 180s timeout"
+isolation_modes:
+  - none
+scenarios:
+  - A1_direct_01
+  - B1_tool_abuse_01
+  - B2_overprivilege_01
+  - D2_sandbox_escape_net_01
+repetitions: 10
+ollama_model: qwen3:4b
+results_dir: results/

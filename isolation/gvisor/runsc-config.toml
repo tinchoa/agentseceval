@@ -1,0 +1,24 @@
+# gVisor runsc configuration for AgentSecEval
+# Reference: https://gvisor.dev/docs/user_guide/containerd/configuration/
+
+[runsc_config]
+  # Platform: ptrace is the most portable; kvm gives better performance on bare metal.
+  platform = "ptrace"
+
+  # Enable strace-like logging of intercepted syscalls (useful for observing escape attempts).
+  strace = false
+  strace-log = "/var/log/runsc-strace.log"
+
+  # Log level: warning | info | debug
+  debug = false
+  log-fd = 2
+
+  # Network stack: netstack (gVisor's own) or host.
+  # Use "netstack" to enforce full network isolation via gVisor's user-space stack.
+  network = "netstack"
+
+  # File system overlay: enables writable overlay on top of read-only mounts.
+  overlay = true
+
+  # Disable direct filesystem access for stronger isolation (gofer process mediates all FS ops).
+  directfs = false
